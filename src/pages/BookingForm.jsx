@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Box, Button, FormControl, FormLabel, Input, Select, Textarea, VStack, useToast } from '@chakra-ui/react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { LoadScript, GoogleMap, Marker, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
+import AuthenticationDomainFacade from 'path-to-authentication-domain-facade'; // Ensure correct import path
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -71,7 +72,7 @@ const BookingForm = () => {
 
     try {
       console.log('Submitting form with data:', formData);
-      const response = await fetch('https://valid-endpoint-for-booking.com/bookings', {
+      const response = await fetch('https://placeholder-url-for-testing.com/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
